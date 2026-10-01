@@ -1,4 +1,4 @@
-const { GraphQLError } = require('graphql');
+const { GraphQLError } = require("graphql");
 
 function toPlain(row) {
   const data = row.get({ plain: true });

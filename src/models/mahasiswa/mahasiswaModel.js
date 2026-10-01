@@ -1,11 +1,11 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../database');
-const JenisKelamin = require('../jenis_kelamin/jenisKelaminModel');
-const ProgramStudi = require('../program_studi/programStudiModel');
-const Angkatan = require('../angkatan/angkatanModel');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../../database");
+const JenisKelamin = require("../jenis_kelamin/jenisKelaminModel");
+const ProgramStudi = require("../program_studi/programStudiModel");
+const Angkatan = require("../angkatan/angkatanModel");
 
 const Mahasiswa = sequelize.define(
-  'Mahasiswa',
+  "Mahasiswa",
   {
     id_mahasiswa: {
       type: DataTypes.UUID,
@@ -26,11 +26,11 @@ const Mahasiswa = sequelize.define(
     update_at: { type: DataTypes.DATE },
     delete_at: { type: DataTypes.DATE },
   },
-  { tableName: 'mahasiswa', timestamps: false }
+  { tableName: "mahasiswa", timestamps: false },
 );
 
-Mahasiswa.belongsTo(JenisKelamin, { foreignKey: 'id_jenis_kelamin' });
-Mahasiswa.belongsTo(ProgramStudi, { foreignKey: 'id_program_studi' });
-Mahasiswa.belongsTo(Angkatan, { foreignKey: 'id_angkatan' });
+Mahasiswa.belongsTo(JenisKelamin, { foreignKey: "id_jenis_kelamin" });
+Mahasiswa.belongsTo(ProgramStudi, { foreignKey: "id_program_studi" });
+Mahasiswa.belongsTo(Angkatan, { foreignKey: "id_angkatan" });
 
 module.exports = Mahasiswa;

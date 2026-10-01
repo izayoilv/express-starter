@@ -1,8 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../database');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../../database");
 
 const ProgramStudi = sequelize.define(
-  'ProgramStudi',
+  "ProgramStudi",
   {
     id_program_studi: {
       type: DataTypes.UUID,
@@ -15,7 +15,7 @@ const ProgramStudi = sequelize.define(
     update_at: { type: DataTypes.DATE },
     delete_at: { type: DataTypes.DATE },
   },
-  { tableName: 'program_studi', timestamps: false }
+  { tableName: "program_studi", timestamps: false },
 );
 
 module.exports = ProgramStudi;

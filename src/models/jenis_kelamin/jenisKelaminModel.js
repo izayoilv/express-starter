@@ -1,8 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../database');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../../database");
 
 const JenisKelamin = sequelize.define(
-  'JenisKelamin',
+  "JenisKelamin",
   {
     id_jenis_kelamin: {
       type: DataTypes.UUID,
@@ -15,7 +15,7 @@ const JenisKelamin = sequelize.define(
     update_at: { type: DataTypes.DATE },
     delete_at: { type: DataTypes.DATE },
   },
-  { tableName: 'jenis_kelamin', timestamps: false }
+  { tableName: "jenis_kelamin", timestamps: false },
 );
 
 module.exports = JenisKelamin;
